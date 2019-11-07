@@ -1,0 +1,577 @@
+@font-face {
+  font-family: TeleGroteskMedium;
+  src: url(./fonts/telegrotesknext-medium.woff) format("woff"),
+    url(./fonts/telegrotesknext-medium.woff2) format("woff2");
+}
+
+:root {
+  /* Colour Variables Telekom Brand Design */
+  --magenta: rgb(226, 0, 116);
+  --white: rgb(255, 255, 255);
+  --black: rgb(75, 75, 75);
+  --superlightgrey: rgb(238, 238, 238);
+  --lightgrey: #a4a4a4;
+  --darkgrey: #6c6c6c;
+  --darkblue: rgb(16, 99, 173);
+  --lightblue: rgb(83, 186, 242);
+  --cyan: #1bada2;
+  --green: #bfcb44;
+  --yellow: #ffd329;
+  --orange: #ff9a1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: TeleGroteskMedium !important;
+  background-color: var(--white);
+}
+
+.top-nav-bar {
+  height: 57px;
+  top: 0;
+  position: sticky;
+  background: var(--white);
+  /* margin-bottom: 20px; */
+  box-shadow: 0px 1px 2px 1px var(--darkgrey);
+  z-index: 2;
+}
+
+.logo {
+  height: 45px;
+  margin: 10px 50px;
+}
+
+.top-nav-bar h1 {
+  width: 100%;
+  color: var(--darkgrey);
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.form-control {
+  margin-top: 9px;
+  margin-left: 30px;
+  border: 1px solid var(--superlightgrey);
+  border-radius: 20px 0 0 20px !important;
+  background: var(--superlightgrey);
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: var(--superlightgrey);
+  background-color: var(--superlightgrey);
+}
+
+.input-group-text {
+  background: var(--superlightgrey) !important;
+  border: 1px solid var(--superlightgrey) !important;
+  margin: 8.5px 10px 3px 0 !important;
+  border-radius: 0 20px 20px 0 !important;
+  cursor: pointer;
+  height: 38px;
+}
+
+.search-box {
+  display: inline-flex;
+  width: 60%;
+}
+
+.fa-search {
+  color: var(--lightgrey);
+}
+
+.menu-bar {
+  width: 40%;
+  height: 57px;
+  float: right;
+}
+
+.menu-bar ul {
+  display: inline-flex;
+  float: right;
+}
+
+.menu-bar ul li {
+  border-left: 1px solid var(--white);
+  list-style-type: none;
+  padding: 15px 35px;
+  text-align: center;
+  background-color: var(--cyan);
+  cursor: pointer;
+}
+
+.menu-bar ul li:hover {
+  background-color: var(--darkgrey);
+}
+
+.menu-bar ul li a {
+  font: bold 16px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.fa-shopping-cart {
+  margin-right: 5px;
+}
+.fa-user-plus {
+  margin-right: 5px;
+}
+
+.fa-user {
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 980px) {
+  .top-nav-bar {
+    height: 118px;
+    border-bottom: 0;
+  }
+  .top-nav-bar h1 {
+    font-size: 24px;
+  }
+  .search-box {
+    width: 100%;
+  }
+  .menu-bar {
+    width: 100%;
+  }
+  .menu-bar ul {
+    margin: 10px 0;
+    width: 100%;
+  }
+  .menu-bar ul li {
+    font-size: 18px;
+    height: 70px;
+    width: 100%;
+  }
+}
+
+/* breadcrumb */
+ul.breadcrumb {
+  padding: 10px 16px;
+  margin-top: 20px;
+  list-style: none;
+  background-color: var(--superlightgrey);
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li + li:before {
+  padding: 8px;
+  color: var(--darkgrey);
+  content: "/\00a0";
+}
+ul.breadcrumb li {
+  color: var(--darkgrey);
+}
+ul.breadcrumb li a {
+  color: var(--orange);
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: var(--cyan);
+  text-decoration: underline;
+}
+
+/* Title */
+.title-plantshop {
+  padding: 100px 0;
+}
+.title-box-plantshop {
+  margin: 20px 0;
+}
+.title-style h1 {
+  padding: 40px 0;
+  color: var(--darkgrey);
+}
+.title-style {
+  margin: 0 auto 40px;
+  height: 120px;
+  width: 80%;
+  max-width: 700px;
+  background: var(--white);
+  position: relative;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
+}
+.title-style::after {
+  content: "";
+  height: 100px;
+  width: 200px;
+  background-color: var(--cyan);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+}
+.title-style::before {
+  content: "";
+  height: 100px;
+  width: 200px;
+  background-color: var(--cyan);
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  z-index: -1;
+}
+
+/* slider  */
+.slider {
+  width: 80%;
+  margin: 5% 10% 0 10%;
+  padding: 0 10px;
+}
+.carousel {
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+.carousel-indicators {
+  z-index: 1 !important;
+}
+@media only screen and (max-width: 980px) {
+  .slider {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* featured Categories */
+.featured-categories {
+  padding: 50px 0;
+  margin: 50px 0;
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);
+}
+.featured-categories img {
+  width: 100%;
+  padding: 20px 0;
+  transition: 1s;
+  cursor: pointer;
+  border-radius: 5%;
+}
+.featured-categories img:hover {
+  transform: scale(1.1);
+}
+
+.featured-categories h2 {
+  text-align: center;
+  margin-top: 5px;
+  color: var(--darkgrey);
+  text-decoration: underline var(--cyan);
+}
+
+/* on sale/similar product */
+.title-box {
+  background: var(--cyan);
+  color: var(--white);
+  width: 180px;
+  padding: 4px 10px;
+  height: 40px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.title-box::after {
+  content: "";
+  border-top: 40px solid var(--cyan);
+  border-right: 50px solid transparent;
+  position: absolute;
+  display: flex;
+  margin: -4px 0 0 170px;
+}
+
+/* product-top css */
+.product-top img {
+  width: 100%;
+}
+.overlay-right {
+  width: 100%;
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+}
+.overlay-right .fa {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--darkgrey);
+  height: 35px;
+  width: 35px;
+  font-size: 20px;
+  padding: 7px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.overlay-right .btn-secondary {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.product-top:hover .overlay-right {
+  opacity: 1;
+  margin-left: 5%;
+  transition: 0.5s;
+}
+
+.product-bottom .fa {
+  color: var(--cyan);
+  font-size: 10px;
+}
+.product-bottom h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-bottom h5 {
+  font-size: 15px;
+}
+
+/* product-detail-page */
+.product-detail {
+  margin-top: 70px;
+}
+.product-detail .single-product p.new-arrival {
+  background: var(--cyan);
+  width: 50px;
+  color: var(--white);
+  font: 12px bold;
+  margin-top: 20px;
+}
+
+.product-detail .single-product .col-md-7 h2,
+p {
+  color: var(--darkgrey);
+}
+.product-detail .single-product i.fa {
+  color: var(--cyan);
+}
+.product-detail .single-product p.price {
+  color: var(--cyan);
+  font: 30px bold;
+  padding-top: 20px;
+}
+.product-detail .single-product input[type="text"] {
+  border: 1px solid var(--lightgrey);
+  font-weight: bold;
+  height: 33px;
+  text-align: center;
+  width: 30px;
+}
+.product-detail .single-product button.btn-primary {
+  background: var(--cyan) !important;
+  color: var(--white);
+  font-size: 15px;
+  margin-left: 10px;
+  border: none;
+  box-shadow: none !important;
+}
+.product-detail .product-description {
+  width: 60%;
+  margin: 20px 20%;
+}
+.product-detail .product-description p {
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.product-detail .product-description a,
+h3 {
+  color: var(--cyan);
+}
+
+.product-detail .product-description input[type="submit"] {
+  margin-top: 30px;
+  border: none;
+  background-color: var(--cyan);
+  color: var(--white);
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+}
+.product-detail .product-description .review-form {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid var(--lightgrey);
+}
+
+.product-detail .product-description textarea {
+  width: 100%;
+  height: 60px;
+}
+#similar-products {
+  margin-top: 100px;
+}
+
+/* footer */
+
+@media (max-height: 800px) {
+  footer {
+    position: static;
+  }
+}
+
+.footer-distributed {
+  background-color: var(--cyan);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 30%;
+}
+
+.footer-distributed h3 {
+  color: var(--white);
+  font-size: 36px;
+  margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img {
+  width: 30%;
+}
+
+.footer-distributed h3 span {
+  color: var(--orange);
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: var(--white);
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: var(--darkgrey);
+  color: var(--white);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: var(--white);
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: var(--darkgrey);
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: var(--white);
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 880px) {
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}

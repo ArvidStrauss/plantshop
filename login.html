@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Login</title>
+  </head>
+  <body>
+    <!-- nav-bar -->
+    <div class="top-nav-bar">
+      <div class="search-box">
+        <a href="index.html">
+          <img
+            src="./img/logo_200x200.png"
+            alt="Plant-Shop-Logo"
+            class="logo"
+          />
+        </a>
+        <h1>Plant Shop</h1>
+        <input type="text" class="form-control" />
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+      </div>
+      <div class="menu-bar">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-shopping-cart"></i>Cart(0)</a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fa fa-user-plus"></i>Signup</a>
+          </li>
+          <li>
+            <a href="login.html"><i class="fa fa-user"></i>Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Login-Form -->
+    <section id="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button id="login-btn" onclick="login()">
+            Login
+          </button>
+          <button id="register-btn" onclick="register()">
+            Register
+          </button>
+        </div>
+        <div class="social-icons">
+          <img src="./img/fb.png" alt="facebook-icon" />
+          <img src="./img/ln.png" alt="linkedin-icon" />
+          <img src="./img/tw.png" alt="twitter-icon" />
+        </div>
+        <form id="login-form">
+          <input type="text" placeholder="User-Name" required />
+          <input type="text" placeholder="Passwort" required />
+          <input type="checkbox" id="login-checkbox" /><label
+            for="login-checkbox"
+            >Remember Password</label
+          >
+          <button type="submit">Login</button>
+        </form>
+        <form id="register-form">
+          <input
+            type="text"
+            class="input-field"
+            placeholder="User-Name"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="E-Mail"
+            required
+          />
+          <input
+            type="text"
+            class="input-field"
+            placeholder="Passwort"
+            required
+          />
+          <input type="checkbox" id="register-checkbox" /><label
+            for="register-checkbox"
+            >I agree to the terms & conditions</label
+          >
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </section>
+    <script>
+      var x = document.getElementById("login-form");
+      var y = document.getElementById("register-form");
+      var z = document.getElementById("btn");
+      var l = document.getElementById("login-btn");
+      var r = document.getElementById("register-btn");
+
+      function register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+        l.style.color = "var(--darkgrey)";
+        r.style.color = "var(--white)";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+        r.style.color = "var(--darkgrey)";
+        l.style.color = "var(--white)";
+      }
+    </script>
+  </body>
+</html>
