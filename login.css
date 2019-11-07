@@ -106,5 +106,6 @@
 @media only screen and (max-width: 980px) {
   #hero .form-box {
     margin-top: 20%;
+    background: var(--orange);
   }
 }
