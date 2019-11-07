@@ -96,9 +96,15 @@
   outline: none;
   border-radius: 30px;
 }
-#hero .form-box #login-form {
+#hero .form-box form#login-form {
   left: 50px;
 }
-#hero .form-box #register-form {
+#hero .form-box form#register-form {
   left: 450px;
+}
+
+@media only screen and (max-width: 980px) {
+  #hero .form-box {
+    margin-top: 20%;
+  }
 }
