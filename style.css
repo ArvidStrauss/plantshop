@@ -178,6 +178,16 @@ ul.breadcrumb li a:hover {
   color: var(--cyan);
   text-decoration: underline;
 }
+@media only screen and (max-width: 1030px) {
+  ul.breadcrumb {
+    margin-top: 40px;
+  }
+}
+@media only screen and (max-width: 536px) {
+  ul.breadcrumb {
+    margin-top: 60px;
+  }
+}
 
 /* Title */
 .title-plantshop {
@@ -410,6 +420,12 @@ h3 {
 }
 #similar-products {
   margin-top: 100px;
+}
+@media only screen and (max-width: 760px) {
+  .product-detail .product-description {
+    width: 90%;
+    margin: 20px 5%;
+  }
 }
 
 /* footer */
