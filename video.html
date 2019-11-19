@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Video Test</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151762875-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151762875-1");
+    </script>
+
+    <!-- Embed Webtrekk Tracking Script  -->
+    <script src="js/webtrekk_v4.min.js"></script>
+
+    <!-- Embed Webtrekk media tracking script -->
+    <script src="js/webtrekk_mediaTracking.min.js"></script>
+
+    <!-- Konfiguration Webtrekk -->
+    <script type="text/javascript">
+      var pageconfig = {
+        contentId: "", // generiert eine automatische Content ID aus der URL
+        linkTrack: "link", // aktiviert das Linktracking [link oder standard]
+        linkTrackAttribute: "id"
+      };
+      var wt = new webtrekkV3(pageconfig);
+      wt.sendinfo();
+    </script>
+
+    <!-- Konfiguration Mediatracking -->
+    <script src="js/Webtrekk_Youtube Mediatracking codeSnippet.js"></script>
+
+    <!-- the Webtrekk Tracking-Pixel -->
+    <noscript>
+      <img
+        src="https://tsystems01.webtrekk.net/371090051465173/wt?p=445,0"
+        height="1"
+        width="1"
+        alt=""
+      />
+    </noscript>
+  </head>
+  <body>
+    <!-- event tracking of youtube videos -->
+    <h2>First Video:</h2>
+    <div id="video1"></div>
+
+    <h2>Second Video:</h2>
+    <div id="video2"></div>
+
+    <br />
+    mi:<input type="text" id="mi" value="plant-shop" />
+    <br />
+    mk:<input type="text" id="mk" value="play" /> mt1:
+    <input type="text" id="mt1" value="0" /> mt2:
+    <input type="text" id="mt2" value="11" /> eid:
+    <input type="text" id="eid" value="2157363910951863921" /> bw:
+    <input type="text" id="bw" value="" /> vol:
+    <input type="text" id="vol" value="40" /> mut:
+    <input type="text" id="mut" value="0" />
+
+    <button id="send-request">Send your own request to Webtrekk</button>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
