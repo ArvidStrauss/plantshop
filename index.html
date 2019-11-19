@@ -32,7 +32,7 @@
     <!-- Embed Webtrekk Tracking Script  -->
     <script type="text/javascript" src="js/webtrekk_v4.min.js"></script>
 
-    <!-- Konfiguarion Webtrekk -->
+    <!-- Konfiguration Webtrekk -->
     <script type="text/javascript">
       var pageconfig = {
         contentId: "", // generiert eine automatische Content ID aus der URL
@@ -44,6 +44,65 @@
       var wt = new webtrekkV3(pageconfig);
       wt.sendinfo();
     </script>
+
+    <!-- 3 step event tracking of youtube videos -->
+    <!-- Step2 -->
+    <!-- https://support.webtrekk.com/hc/en-us/articles/360000087919 -->
+    <script>
+      var playerInfoList = [
+        {
+          id: "player",
+          height: "390",
+          width: "640",
+          videoId: "R0BPcvlguJA"
+        }
+      ];
+    </script>
+
+    <!-- 3 step event tracking of youtube videos -->
+    <!-- Step2 -->
+    <!-- https://support.webtrekk.com/hc/en-us/articles/360000087919 -->
+    <script>
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      function onYouTubeIframeAPIReady() {
+        if (!playerInfoList) return;
+        for (var i = 0; i < playerInfoList.length; i++) {
+          var curplayer = createPlayer(playerInfoList[i]);
+        }
+      }
+      function createPlayer(playerInfo) {
+        window["a" + playerInfo.id] = false;
+        return new YT.Player(playerInfo.id, {
+          height: playerInfo.height,
+          width: playerInfo.width,
+          videoId: playerInfo.videoId,
+          events: {
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
+          }
+        });
+      } // The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        console.log("onPlayerReady: ", event);
+      }
+      // The API calls this function when the player's state changes.
+      function onPlayerStateChange(event) {
+        // sends the action request after first player interaction (just once):
+        firstPlayEvent(event);
+      }
+      function firstPlayEvent(eventData) {
+        if (!window["a" + eventData.target.a.id]) {
+          wt.sendinfo({
+            linkId: eventData.target.j.videoData.title
+          });
+          window["a" + eventData.target.a.id] = true;
+        }
+      }
+    </script>
+
     <!-- the Tracking-Pixel -->
     <noscript>
       <img
@@ -101,6 +160,12 @@
       >
       </iframe>
     </div>
+
+    <!-- 3 step event tracking of youtube videos -->
+    <!-- Step1 -->
+    <!-- https://support.webtrekk.com/hc/en-us/articles/360000087919 -->
+    <h2>First Video:</h2>
+    <div id="player"></div>
 
     <!-- header -->
     <section class="header">
