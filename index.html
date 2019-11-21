@@ -12,16 +12,17 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="img/favicon.ico" />
     <title>Plant Shop</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Embed Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-151762875-1"
     ></script>
+
+    <!-- Google Analytics Konfiguration -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -32,13 +33,27 @@
       gtag("config", "UA-151762875-1");
     </script>
 
-    <!-- Embed Webtrekk Tracking Script  -->
+    <!-- Google Tag Manager -->
+    <!-- <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-W7N36DX");
+    </script> -->
+
+    <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
     <script src="js/webtrekk_v4.min.js"></script>
 
     <!-- Embed Webtrekk media tracking script -->
     <script src="js/webtrekk_mediaTracking.min.js"></script>
 
-    <!-- Konfiguration Webtrekk -->
+    <!-- Konfiguration Webtrekk v4 Pixel -->
     <script type="text/javascript">
       var pageconfig = {
         contentId: "", // generiert eine automatische Content ID aus der URL
@@ -63,6 +78,16 @@
     </noscript>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <!-- <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W7N36DX"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript> -->
+
     <!-- nav-bar -->
     <div class="top-nav-bar">
       <div class="search-box">
@@ -162,8 +187,8 @@
         <a
           ><img
             class="img-fluid z-depth-1"
-            src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg"
-            alt="video"
+            src="img/modal1.jpg"
+            alt="modal1"
             data-toggle="modal"
             data-target="#modal1"
         /></a>
@@ -229,8 +254,8 @@
         <a
           ><img
             class="img-fluid z-depth-1"
-            src="https://mdbootstrap.com/img/screens/yt/screen-video-2.jpg"
-            alt="video"
+            src="img/modal2.jpg"
+            alt="modal2"
             data-toggle="modal"
             data-target="#modal6"
         /></a>
@@ -296,8 +321,8 @@
         <a
           ><img
             class="img-fluid z-depth-1"
-            src="https://mdbootstrap.com/img/screens/yt/screen-video-3.jpg"
-            alt="video"
+            src="img/modal3.jpg"
+            alt="modal3"
             data-toggle="modal"
             data-target="#modal4"
         /></a>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- webtrekk Smart Pixel -->
+    <script type="text/javascript" async src="js/loader.min.js"></script>
+
+    <!-- webtrekk Smart Pixel Konfiguration -->
+    <script type="text/javascript">
+      window.wtSmart = window.wtSmart || [];
+      window.wtSmart.push(function(wtSmart) {
+        // set initial tracking config
+        wtSmart.init.set({
+          trackId: "371090051465173",
+          trackDomain: "tsystems01.webtrekk.net"
+        });
+
+        // send tracking data
+        wtSmart.track();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Smartpixel Webtrekk Test Suite</h1>
+  </body>
+</html>

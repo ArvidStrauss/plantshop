@@ -17,11 +17,13 @@
     <link rel="icon" href="img/favicon.ico" />
     <title>Login</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Embed Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-151762875-1"
     ></script>
+
+    <!-- Google Analytics Konfiguration -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -32,20 +34,39 @@
       gtag("config", "UA-151762875-1");
     </script>
 
-    <!-- Embed Webtrekk Tracking Script  -->
-    <script type="text/javascript" src="js/webtrekk_v4.min.js"></script>
+    <!-- Google Tag Manager -->
+    <!-- <script>
+        (function(w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-W7N36DX");
+      </script> -->
 
-    <!-- Konfiguration Webtrekk -->
+    <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
+    <script src="js/webtrekk_v4.min.js"></script>
+
+    <!-- Embed Webtrekk media tracking script -->
+    <script src="js/webtrekk_mediaTracking.min.js"></script>
+
+    <!-- Konfiguration Webtrekk v4 Pixel -->
     <script type="text/javascript">
       var pageconfig = {
         contentId: "", // generiert eine automatische Content ID aus der URL
         linkTrack: "link", // aktiviert das Linktracking [link oder standard]
-        linkTrackAttribute: "id",
-        form: "1"
+        linkTrackAttribute: "id"
       };
       var wt = new webtrekkV3(pageconfig);
       wt.sendinfo();
     </script>
+
+    <!-- Konfiguration Mediatracking -->
+    <script src="js/Webtrekk_Youtube Mediatracking codeSnippet.js"></script>
 
     <!-- the Webtrekk Tracking-Pixel -->
     <noscript>
@@ -57,7 +78,17 @@
       />
     </noscript>
   </head>
+
   <body>
+    <!-- <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-W7N36DX"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript> -->
+
     <!-- nav-bar -->
     <div class="top-nav-bar">
       <div class="search-box">
