@@ -64,7 +64,8 @@
   width: 280px;
   transition: 0.5s;
 }
-#hero .form-box form input[type="text"] {
+#hero .form-box form input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;

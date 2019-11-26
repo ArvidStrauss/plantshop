@@ -16,6 +16,8 @@
     <link rel="icon" href="img/favicon.ico" />
     <title>Plant Shop</title>
 
+    <a href="smartpixel.html">Webtrekk-Smartpixel Testseite</a>
+
     <!-- Embed Google Analytics -->
     <script
       async
@@ -33,27 +35,13 @@
       gtag("config", "UA-151762875-1");
     </script>
 
-    <!-- Google Tag Manager -->
-    <!-- <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-W7N36DX");
-    </script> -->
-
     <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
     <script src="js/webtrekk_v4.min.js"></script>
 
     <!-- Embed Webtrekk media tracking script -->
     <script src="js/webtrekk_mediaTracking.min.js"></script>
 
-    <!-- Konfiguration Webtrekk v4 Pixel -->
+    <!-- Seitenspezifische Konfiguration Webtrekk v4 Pixel -->
     <script type="text/javascript">
       var pageconfig = {
         contentId: "", // generiert eine automatische Content ID aus der URL
@@ -61,6 +49,35 @@
         linkTrackAttribute: "id"
       };
       var wt = new webtrekkV3(pageconfig);
+      wt.contentGroup = {
+        11: "alle blumen"
+      };
+      wt.customParameter = {
+        1: "200.5"
+      };
+      wt.product = "Kaktus aus Mexiko";
+      wt.productCategory = {
+        11: "Kaktus"
+      };
+      wt.productQuantity = "9";
+      wt.productCost = "80.00";
+      wt.productStatus = "add";
+      wt.currency = "EUR";
+      wt.orderId = "M-12345";
+      wt.orderValue = "160.00";
+      wt.couponValue = "10.00";
+
+      wt.customEcommerceParameter = {
+        1: "2",
+        2: "6",
+        3: "gruen"
+      };
+
+      wt.paymentMethod = "paypal";
+      wt.shippingService = "dhl";
+      wt.shippingSpeed = "express";
+
+      console.log(wt);
       wt.sendinfo();
     </script>
 
@@ -78,16 +95,6 @@
     </noscript>
   </head>
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-W7N36DX"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe
-    ></noscript> -->
-
     <!-- nav-bar -->
     <div class="top-nav-bar">
       <div class="search-box">
@@ -104,8 +111,25 @@
       </div>
       <div class="menu-bar">
         <ul>
-          <li>
+          <li class="submenu">
             <a href="login.html"><i class="fa fa-shopping-cart"></i>Cart(0)</a>
+            <div id="shopping-cart">
+              <table id="cart-content" class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+              <a href="#" id="clear-cart" class="button-clear-cart u-full-width"
+                >Clear Cart</a
+              >
+            </div>
           </li>
           <li>
             <a href="login.html"><i class="fa fa-user-plus"></i>Signup</a>
@@ -329,11 +353,6 @@
       </div>
       <!-- Grid column -->
     </div>
-
-    <!-- event tracking of youtube videos -->
-    <div id="video1"></div>
-
-    <div id="video2"></div>
 
     <!-- header -->
     <section class="header">
@@ -613,6 +632,7 @@
         </div>
       </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   </body>

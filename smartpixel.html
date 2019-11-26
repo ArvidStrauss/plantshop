@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <!-- webtrekk Smart Pixel -->
+    <!-- https://docs.webtrekk.com/display/WSP/Smart+Pixel -->
     <script type="text/javascript" async src="js/loader.min.js"></script>
 
     <!-- webtrekk Smart Pixel Konfiguration -->
@@ -15,8 +16,16 @@
         // set initial tracking config
         wtSmart.init.set({
           trackId: "371090051465173",
-          trackDomain: "tsystems01.webtrekk.net"
+          trackDomain: "tsystems01.webtrekk.net",
+          domain: "",
+          cookie: "1"
         });
+
+        // set page data
+        wtSmart.page.data.set("en.index.home");
+
+        // get initial tracking config
+        var config = wtSmart.init.get();
 
         // send tracking data
         wtSmart.track();
@@ -24,6 +33,11 @@
     </script>
   </head>
   <body>
+    <header>Test-Header</header>
     <h1>Smartpixel Webtrekk Test Suite</h1>
+    <button>Test-Button</button>
+    <a href="index.html">Home</a>
+    <div style="min-height: 300vh;"></div>
+    <footer>Testfooter</footer>
   </body>
 </html>

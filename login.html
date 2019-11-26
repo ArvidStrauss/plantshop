@@ -34,20 +34,6 @@
       gtag("config", "UA-151762875-1");
     </script>
 
-    <!-- Google Tag Manager -->
-    <!-- <script>
-        (function(w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-          j.async = true;
-          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-W7N36DX");
-      </script> -->
-
     <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
     <script src="js/webtrekk_v4.min.js"></script>
 
@@ -80,15 +66,6 @@
   </head>
 
   <body>
-    <!-- <noscript
-      ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-W7N36DX"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe
-    ></noscript> -->
-
     <!-- nav-bar -->
     <div class="top-nav-bar">
       <div class="search-box">
@@ -105,8 +82,25 @@
       </div>
       <div class="menu-bar">
         <ul>
-          <li>
+          <li class="submenu">
             <a href="login.html"><i class="fa fa-shopping-cart"></i>Cart(0)</a>
+            <div id="shopping-cart">
+              <table id="cart-content" class="u-full-width">
+                <thead>
+                  <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+
+              <a href="#" id="clear-cart" class="button-clear-cart u-full-width"
+                >Clear Cart</a
+              >
+            </div>
           </li>
           <li>
             <a href="login.html"><i class="fa fa-user-plus"></i>Signup</a>
@@ -117,6 +111,7 @@
         </ul>
       </div>
     </div>
+
     <!-- Login-Form -->
     <section id="hero">
       <div class="form-box">
@@ -134,42 +129,31 @@
           <img src="./img/ln.png" alt="linkedin-icon" />
           <img src="./img/tw.png" alt="twitter-icon" />
         </div>
-        <form id="login-form">
+
+        <form id="login-form" action="success.html">
           <input type="text" placeholder="User-Name" required />
-          <input type="text" placeholder="Passwort" required />
+          <input type="password" placeholder="Passwort" required />
           <input type="checkbox" id="login-checkbox" /><label
             for="login-checkbox"
             >Remember Password</label
           >
           <button type="submit">Login</button>
         </form>
-        <form id="register-form">
-          <input
-            type="text"
-            class="input-field"
-            placeholder="User-Name"
-            required
-          />
-          <input
-            type="text"
-            class="input-field"
-            placeholder="E-Mail"
-            required
-          />
-          <input
-            type="text"
-            class="input-field"
-            placeholder="Passwort"
-            required
-          />
+
+        <form id="register-form" action="success.html">
+          <input type="text" placeholder="User-Name" required />
+          <input type="text" placeholder="E-Mail" required />
+          <input type="password" placeholder="Passwort" required />
           <input type="checkbox" id="register-checkbox" /><label
             for="register-checkbox"
             >I agree to the terms & conditions</label
           >
-          <button type="submit" class="submit-btn">Register</button>
+          <button type="submit">Register</button>
         </form>
       </div>
     </section>
+
+    <!-- Sliding Buttons -->
     <script>
       var x = document.getElementById("login-form");
       var y = document.getElementById("register-form");
