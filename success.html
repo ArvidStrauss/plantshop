@@ -47,6 +47,21 @@
         linkTrackAttribute: "id"
       };
       var wt = new webtrekkV3(pageconfig);
+
+      wt.product = "Blaue Lilien aus Radebeul";
+      wt.productQuantity = "1";
+      wt.productCost = "40.00";
+
+      wt.productStatus = "conf"; // view, add or conf
+      wt.currency = "EUR";
+      wt.orderId = "M-5555";
+      wt.orderValue = wt.productCost * wt.productQuantity;
+      wt.couponValue = "10.00";
+
+      wt.paymentMethod = "paypal";
+      wt.shippingService = "dhl";
+      wt.shippingSpeed = "express";
+
       wt.sendinfo();
     </script>
 

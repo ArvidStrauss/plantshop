@@ -7,21 +7,6 @@
     <link rel="icon" href="img/favicon.ico" />
     <title>Video Test</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-151762875-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-151762875-1");
-    </script>
-
     <!-- Embed Webtrekk Tracking Script  -->
     <script src="js/webtrekk_v4.min.js"></script>
 
@@ -73,6 +58,23 @@
 
     <button id="send-request">Send your own request to Webtrekk</button>
 
-    <script src="js/script.js"></script>
+    <script>
+      //only for video.html as testscript
+      if (document.querySelector("#send-request"))
+        document
+          .querySelector("#send-request")
+          .addEventListener("click", () => {
+            wt_sendinfo_media(
+              document.querySelector("#mi").value,
+              document.querySelector("#mk").value,
+              document.querySelector("#mt1").value,
+              document.querySelector("#mt2").value,
+              document.querySelector("#eid").value,
+              document.querySelector("#bw").value,
+              document.querySelector("#vol").value,
+              document.querySelector("#mut").value
+            );
+          });
+    </script>
   </body>
 </html>

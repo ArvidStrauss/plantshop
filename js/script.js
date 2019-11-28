@@ -1,60 +1,71 @@
-//only for video.html as testscript
-if (document.querySelector("#send-request"))
-  document.querySelector("#send-request").addEventListener("click", () => {
-    wt_sendinfo_media(
-      document.querySelector("#mi").value,
-      document.querySelector("#mk").value,
-      document.querySelector("#mt1").value,
-      document.querySelector("#mt2").value,
-      document.querySelector("#eid").value,
-      document.querySelector("#bw").value,
-      document.querySelector("#vol").value,
-      document.querySelector("#mut").value
-    );
-  });
+const products =
+  JSON.parse(window.localStorage.getItem("products")) || new Array();
 
-//shopping cart
-if (document.querySelector("#cart-content")) {
-  const cartContent = document.querySelector("#cart-content tbody");
+const cartContent = document.querySelector("#cart-content tbody");
+fillShoppingCart(products);
 
-  cartContent.addEventListener("click", removeCourse);
-  function removeCourse(e) {
-    if (e.target.classList.contains("remove")) {
-      e.target.parentElement.parentElement.remove();
-      wt.customEcommerceParameter = {
-        1: "1" //removed from shopping cart
-      };
-      wt.sendinfo();
-    }
+cartContent.addEventListener("click", removeCourse);
+function removeCourse(e) {
+  if (e.target.classList.contains("remove")) {
+    e.target.parentElement.parentElement.remove();
+
+    wt.product = document.querySelector("h2#title-product").textContent;
+    wt.customEcommerceParameter = {
+      1: "1" //removed from shopping cart
+    };
+    wt.sendinfo();
   }
+}
 
-  document.querySelector("#add-to-cart").addEventListener("click", () => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
+document.querySelector("#add-to-cart").addEventListener("click", () => {
+  const product = {
+    image: document.querySelector("img.img-one").src,
+    title: document.querySelector("h2#title-product").textContent,
+    price: document.querySelector(".price").textContent,
+    qty: document.querySelector("input#productQuantity").value,
+    id: document.querySelector("button#add-to-cart").getAttribute("data-id")
+  };
+  products.push(product);
+  window.localStorage.setItem("products", JSON.stringify(products));
+  addItemToCart(product);
+  // send add Product to Webtrekk
+  wt.product = document.querySelector("h2#title-product").textContent;
+  wt.productQuantity = document.querySelector("input#productQuantity").value;
+  wt.productStatus = "add";
+  wt.sendinfo();
+});
+
+function fillShoppingCart(products) {
+  products.forEach(product => {
+    addItemToCart(product);
+  });
+}
+
+function addItemToCart(product) {
+  const row = document.createElement("tr");
+  row.innerHTML = `
     <tr>
       <td>
         <img
-          src="./img/flowers1.jpg"
-          alt="blue-lilies"
+          src="${product.image}"
+          alt="${product.title}"
           width="100"
         />
       </td>
       <td>
-        Blaue Lilien
+        ${product.title}
       </td>
       <td>
-        € 40,00
+        ${product.price}
       </td>
       <td>
-        <a href="#" class="remove" data-id="1">X</a>
+        ${product.qty}
+      </td>
+      <td>
+        <a href="#" class="remove" data-id="${product.id}">X</a>
       </td>
     </tr>
     `;
 
-    cartContent.appendChild(row);
-    wt.product = document.querySelector("h2#title-product").textContent;
-    wt.productQuantity = document.querySelector("input#productQuantity").value;
-    wt.productStatus = "add";
-    wt.sendinfo();
-  });
+  cartContent.appendChild(row);
 }
