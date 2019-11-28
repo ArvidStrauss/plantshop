@@ -5,12 +5,12 @@ var playerInfoList = [
     width: "640",
     videoId: "B8xHukKq1Uk",
     wtParams: {
-      ck3: "event parameter 3 value",
-      mg1: "YouTube Video - Media Category",
-      cs1: "Session parameter 1 value",
-      cb1: "eCommerce parameter 1 value",
-      ck1: "ck1 value",
-      ck2: "ck2 value"
+      // ck3: "event parameter 3 value",
+      // mg1: "YouTube Video - Media Category",
+      // cs1: "Session parameter 1 value",
+      // cb1: "eCommerce parameter 1 value",
+      // ck1: "ck1 value",
+      // ck2: "ck2 value"
     }
   },
   {
