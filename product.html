@@ -48,16 +48,17 @@
       };
       var wt = new webtrekkV3(pageconfig);
       wt.contentGroup = {
-        11: "alle blumen"
+        11: "Lilien"
       };
-
-      wt.product = "Blaue Lilien aus Radebeul";
       wt.productCategory = {
         1: "Lilien"
       };
+
+      wt.product = "Blaue Lilien aus Radebeul";
       wt.productQuantity = "1";
       wt.productCost = "40.00";
-      wt.productStatus = "conf";
+
+      wt.productStatus = "conf"; // view, add or conf
       wt.currency = "EUR";
       wt.orderId = "M-5555";
       wt.orderValue = wt.productCost * wt.productQuantity;
@@ -68,9 +69,7 @@
       wt.shippingSpeed = "express";
 
       wt.customEcommerceParameter = {
-        1: "2",
-        2: "3",
-        3: "blau"
+        1: "2" //removed from shopping cart
       };
 
       wt.sendinfo();
@@ -173,7 +172,7 @@
           </div>
           <div class="col-md-7">
             <p class="new-arrival text-center">New</p>
-            <h2 id="title-product">Blaue Lilien - aus Radebeul</h2>
+            <h2 id="title-product">Blaue Lilien aus Radebeul</h2>
             <p>Bestell-Nr.: 72098</p>
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -183,8 +182,8 @@
             <p class="price">€ 40,00</p>
             <p><b>Verfügbarkeit: </b>verfügbar</p>
             <p><b>Zustand: </b>neu</p>
-            <label>Quantity: </label>
-            <input type="text" value="1" />
+            <label for="productQuantity">Quantity: </label>
+            <input id="productQuantity" type="text" value="1" />
             <button class="btn btn-primary add-to-cart" id="add-to-cart">
               Add to Cart
             </button>

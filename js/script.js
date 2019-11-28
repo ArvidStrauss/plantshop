@@ -21,6 +21,10 @@ if (document.querySelector("#cart-content")) {
   function removeCourse(e) {
     if (e.target.classList.contains("remove")) {
       e.target.parentElement.parentElement.remove();
+      wt.customEcommerceParameter = {
+        1: "1" //removed from shopping cart
+      };
+      wt.sendinfo();
     }
   }
 
@@ -48,5 +52,9 @@ if (document.querySelector("#cart-content")) {
     `;
 
     cartContent.appendChild(row);
+    wt.product = document.querySelector("h2#title-product").textContent;
+    wt.productQuantity = document.querySelector("input#productQuantity").value;
+    wt.productStatus = "add";
+    wt.sendinfo();
   });
 }
