@@ -16,24 +16,25 @@ function removeCourse(e) {
     wt.sendinfo();
   }
 }
-
-document.querySelector("#add-to-cart").addEventListener("click", () => {
-  const product = {
-    image: document.querySelector("img.img-one").src,
-    title: document.querySelector("h2#title-product").textContent,
-    price: document.querySelector(".price").textContent,
-    qty: document.querySelector("input#productQuantity").value,
-    id: document.querySelector("button#add-to-cart").getAttribute("data-id")
-  };
-  products.push(product);
-  window.localStorage.setItem("products", JSON.stringify(products));
-  addItemToCart(product);
-  // send add Product to Webtrekk
-  wt.product = document.querySelector("h2#title-product").textContent;
-  wt.productQuantity = document.querySelector("input#productQuantity").value;
-  wt.productStatus = "add";
-  wt.sendinfo();
-});
+if (document.querySelector("#add-to-cart")) {
+  document.querySelector("#add-to-cart").addEventListener("click", () => {
+    const product = {
+      image: document.querySelector("img.img-one").src,
+      title: document.querySelector("h2#title-product").textContent,
+      price: document.querySelector(".price").textContent,
+      qty: document.querySelector("input#productQuantity").value,
+      id: document.querySelector("button#add-to-cart").getAttribute("data-id")
+    };
+    products.push(product);
+    window.localStorage.setItem("products", JSON.stringify(products));
+    addItemToCart(product);
+    // send add Product to Webtrekk
+    wt.product = document.querySelector("h2#title-product").textContent;
+    wt.productQuantity = document.querySelector("input#productQuantity").value;
+    wt.productStatus = "add";
+    wt.sendinfo();
+  });
+}
 
 function fillShoppingCart(products) {
   products.forEach(product => {
