@@ -10,16 +10,17 @@ function removeCourse(e) {
     foundIndex = products.findIndex(
       x => x.id == e.target.getAttribute("data-id")
     );
+    wt = new webtrekkV3(pageconfig);
+    wt.product = products[foundIndex].title;
+    wt.customEcommerceParameter = {
+      1: String(products[foundIndex].qty) //removed from shopping cart
+    };
+    wt.sendinfo();
+
     products.splice(foundIndex, 1);
     window.localStorage.setItem("products", JSON.stringify(products));
 
     e.target.parentElement.parentElement.remove();
-
-    wt.product = document.querySelector("h2#title-product").textContent;
-    wt.customEcommerceParameter = {
-      1: "1" //removed from shopping cart
-    };
-    wt.sendinfo();
   }
 }
 if (document.querySelector("#add-to-cart")) {
@@ -55,6 +56,7 @@ if (document.querySelector("#add-to-cart")) {
     window.localStorage.setItem("products", JSON.stringify(products));
 
     // send add Product to Webtrekk
+    wt = new webtrekkV3(pageconfig);
     wt.product = document.querySelector("h2#title-product").textContent;
     wt.productQuantity = document.querySelector("input#productQuantity").value;
     wt.productStatus = "add";
