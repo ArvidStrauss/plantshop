@@ -3,7 +3,7 @@
   height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./img/flower-banner.jpg");
+    url('./img/flower-banner.jpg');
   background-position: center;
   background-size: cover;
   position: absolute;
@@ -13,7 +13,7 @@
   height: 480px;
   position: relative;
   margin: 6% auto;
-  background: var(--white);
+  background: var(--blue);
   padding: 5px;
   border-radius: 30px;
   overflow: hidden;
@@ -64,8 +64,8 @@
   width: 280px;
   transition: 0.5s;
 }
-#hero .form-box form input[type="text"],
-input[type="password"] {
+#hero .form-box form input[type='text'],
+input[type='password'] {
   width: 100%;
   padding: 10px 0;
   margin: 5px 0;
@@ -76,7 +76,7 @@ input[type="password"] {
   outline: none;
   background: transparent;
 }
-#hero .form-box form input[type="checkbox"] {
+#hero .form-box form input[type='checkbox'] {
   margin: 30px 10px 30px 0;
 }
 #hero .form-box form label {
@@ -85,7 +85,7 @@ input[type="password"] {
   position: absolute;
   bottom: 65px;
 }
-#hero .form-box form button[type="submit"] {
+#hero .form-box form button[type='submit'] {
   width: 85%;
   padding: 10px 30px;
   cursor: pointer;
