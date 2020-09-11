@@ -1,76 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" href="img/favicon.ico" />
-    <title>Vielen Dank</title>
 
-    <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
-    <script src="js/webtrekk_v4.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon" href="img/favicon.ico" />
+  <title>Vielen Dank</title>
 
-    <!-- Konfiguration Webtrekk v4 Pixel -->
-    <script type="text/javascript">
-      var pageconfig = {
-        contentId: "", // generiert eine automatische Content ID aus der URL
-        linkTrack: "link", // aktiviert das Linktracking [link oder standard]
-        linkTrackAttribute: "id"
-      };
-      var wt = new webtrekkV3(pageconfig);
+  <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
+  <script src="js/webtrekk_v4.min.js"></script>
 
-      wt.product = "Blaue Lilien aus Radebeul";
-      wt.productQuantity = "1";
-      wt.productCost = "40.00";
+  <!-- Konfiguration Webtrekk v4 Pixel -->
+  <script type="text/javascript">
+    var pageconfig = {
+      contentId: "", // generiert eine automatische Content ID aus der URL
+      linkTrack: "link", // aktiviert das Linktracking [link oder standard]
+      linkTrackAttribute: "id"
+    };
+    var wt = new webtrekkV3(pageconfig);
 
-      wt.productStatus = "conf"; // view, add or conf
-      wt.currency = "EUR";
-      wt.orderId = "M-0312";
-      wt.orderValue = "40.00";
-      wt.couponValue = "10.00";
+    wt.product = "Blaue Lilien aus Radebeul";
+    wt.productQuantity = "1";
+    wt.productCost = "40.00";
 
-      wt.paymentMethod = "paypal";
-      wt.shippingService = "dhl";
-      wt.shippingSpeed = "express";
+    wt.productStatus = "conf"; // view, add or conf
+    wt.currency = "EUR";
+    wt.orderId = "M-0312";
+    wt.orderValue = "40.00";
+    wt.couponValue = "10.00";
 
-      wt.sendinfo();
-    </script>
+    wt.paymentMethod = "paypal";
+    wt.shippingService = "dhl";
+    wt.shippingSpeed = "express";
 
-    <!-- the Webtrekk Tracking-Pixel -->
-    <noscript>
-      <img
-        src="https://tsystems01.webtrekk.net/371090051465173/wt?p=445,0"
-        height="1"
-        width="1"
-        alt=""
-      />
-    </noscript>
-  </head>
-  <body>
-    <div class="jumbotron text-center">
-      <h1 class="display-3">Vielen Dank für Ihren Einkauf!</h1>
-      <p class="lead">
-        <strong>Überprüfen Sie Ihren E-Mail Ordner</strong> für weitere Details.
-      </p>
-      <hr />
-      <p>Haben Sie Probleme? <a href="">Kontaktieren Sie uns</a></p>
-      <p class="lead">
-        <a class="btn btn-primary" href="index.html" role="button"
-          >Zurück zur Startseite</a
-        >
-      </p>
-    </div>
+    wt.sendinfo();
+  </script>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  </body>
+  <!-- the Webtrekk Tracking-Pixel -->
+  <noscript>
+    <img src="https://tsystems01.webtrekk.net/371090051465173/wt?p=445,0" height="1" width="1" alt="" />
+  </noscript>
+</head>
+
+<body>
+  <div class="jumbotron text-center">
+    <h1 class="display-3">Vielen Dank für Ihren Einkauf!</h1>
+    <p class="lead">
+      <strong>Überprüfen Sie Ihren E-Mail Ordner</strong> für weitere Details.
+    </p>
+    <hr />
+    <p>Haben Sie Probleme? <a href="">Kontaktieren Sie uns</a></p>
+    <p class="lead">
+      <a class="btn btn-primary" href="index.html" role="button">Zurück zur Startseite</a>
+    </p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
 </html>

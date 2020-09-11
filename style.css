@@ -1,7 +1,7 @@
 @font-face {
   font-family: TeleGroteskMedium;
-  src: url(./fonts/telegrotesknext-medium.woff) format("woff"),
-    url(./fonts/telegrotesknext-medium.woff2) format("woff2");
+  src: url(./fonts/telegrotesknext-medium.woff) format('woff'),
+    url(./fonts/telegrotesknext-medium.woff2) format('woff2');
 }
 
 :root {
@@ -254,7 +254,7 @@ ul.breadcrumb li {
 ul.breadcrumb li + li:before {
   padding: 8px;
   color: var(--darkgrey);
-  content: "/\00a0";
+  content: '/\00a0';
 }
 ul.breadcrumb li {
   color: var(--darkgrey);
@@ -299,7 +299,7 @@ ul.breadcrumb li a:hover {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 50, 0.5);
 }
 .title-style::after {
-  content: "";
+  content: '';
   height: 100px;
   width: 200px;
   background-color: var(--cyan);
@@ -309,7 +309,7 @@ ul.breadcrumb li a:hover {
   z-index: -1;
 }
 .title-style::before {
-  content: "";
+  content: '';
   height: 100px;
   width: 200px;
   background-color: var(--cyan);
@@ -380,7 +380,7 @@ ul.breadcrumb li a:hover {
 }
 
 .title-box::after {
-  content: "";
+  content: '';
   border-top: 40px solid var(--cyan);
   border-right: 50px solid transparent;
   position: absolute;
@@ -459,7 +459,7 @@ p {
   font: 30px bold;
   padding-top: 20px;
 }
-.product-detail .single-product input[type="text"] {
+.product-detail .single-product input[type='text'] {
   border: 1px solid var(--lightgrey);
   font-weight: bold;
   height: 33px;
@@ -488,7 +488,7 @@ h3 {
   color: var(--cyan);
 }
 
-.product-detail .product-description input[type="submit"] {
+.product-detail .product-description input[type='submit'] {
   margin-top: 30px;
   border: none;
   background-color: var(--cyan);

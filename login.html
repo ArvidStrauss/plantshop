@@ -1,158 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./login.css" />
-    <link rel="icon" href="img/favicon.ico" />
-    <title>Login</title>
 
-    <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
-    <script src="js/webtrekk_v4.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./login.css" />
+  <link rel="icon" href="img/favicon.ico" />
+  <title>Login</title>
 
-    <!-- Konfiguration Webtrekk v4 Pixel -->
-    <script type="text/javascript">
-      var pageconfig = {
-        contentId: "", // generiert eine automatische Content ID aus der URL
-        linkTrack: "link", // aktiviert das Linktracking [link oder standard]
-        linkTrackAttribute: "id"
-      };
-      var wt = new webtrekkV3(pageconfig);
-      wt.sendinfo();
-    </script>
+  <!-- Embed Webtrekk Tracking Script v4 Pixel  -->
+  <script src="js/webtrekk_v4.min.js"></script>
 
-    <!-- the Webtrekk Tracking-Pixel -->
-    <noscript>
-      <img
-        src="https://tsystems01.webtrekk.net/371090051465173/wt?p=445,0"
-        height="1"
-        width="1"
-        alt=""
-      />
-    </noscript>
-  </head>
+  <!-- Konfiguration Webtrekk v4 Pixel -->
+  <script type="text/javascript">
+    var pageconfig = {
+      contentId: "", // generiert eine automatische Content ID aus der URL
+      linkTrack: "link", // aktiviert das Linktracking [link oder standard]
+      linkTrackAttribute: "id"
+    };
+    var wt = new webtrekkV3(pageconfig);
+    wt.sendinfo();
+  </script>
 
-  <body>
-    <!-- nav-bar -->
-    <div class="top-nav-bar">
-      <div class="search-box">
-        <a href="index.html">
-          <img
-            src="./img/logo_200x200.png"
-            alt="Plant-Shop-Logo"
-            class="logo"
-          />
-        </a>
-        <a href="index.html"><h1>Plant Shop</h1></a>
-        <input type="text" class="form-control" />
-        <span class="input-group-text"><i class="fa fa-search"></i></span>
-      </div>
-      <div class="menu-bar">
-        <ul>
-          <li class="submenu">
-            <a href="login.html"><i class="fa fa-shopping-cart"></i>Cart(0)</a>
-            <div id="shopping-cart">
-              <table id="cart-content" class="u-full-width">
-                <thead>
-                  <tr>
-                    <th>Image</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
+  <!-- the Webtrekk Tracking-Pixel -->
+  <noscript>
+    <img src="https://tsystems01.webtrekk.net/371090051465173/wt?p=445,0" height="1" width="1" alt="" />
+  </noscript>
+</head>
 
-              <a href="#" id="clear-cart" class="button-clear-cart u-full-width"
-                >Clear Cart</a
-              >
-            </div>
-          </li>
-          <li>
-            <a href="login.html"><i class="fa fa-user-plus"></i>Signup</a>
-          </li>
-          <li>
-            <a href="login.html"><i class="fa fa-user"></i>Login</a>
-          </li>
-        </ul>
-      </div>
+<body>
+  <!-- nav-bar -->
+  <div class="top-nav-bar">
+    <div class="search-box">
+      <a href="index.html">
+        <img src="./img/logo_200x200.png" alt="Plant-Shop-Logo" class="logo" />
+      </a>
+      <a href="index.html">
+        <h1>Plant Shop</h1>
+      </a>
+      <input type="text" class="form-control" />
+      <span class="input-group-text"><i class="fa fa-search"></i></span>
     </div>
+    <div class="menu-bar">
+      <ul>
+        <li class="submenu">
+          <a href="login.html"><i class="fa fa-shopping-cart"></i>Cart(0)</a>
+          <div id="shopping-cart">
+            <table id="cart-content" class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
 
-    <!-- Login-Form -->
-    <section id="hero">
-      <div class="form-box">
-        <div class="button-box">
-          <div id="btn"></div>
-          <button id="login-btn" onclick="login()">
-            Login
-          </button>
-          <button id="register-btn" onclick="register()">
-            Register
-          </button>
-        </div>
-        <div class="social-icons">
-          <img src="./img/fb.png" alt="facebook-icon" />
-          <img src="./img/ln.png" alt="linkedin-icon" />
-          <img src="./img/tw.png" alt="twitter-icon" />
-        </div>
+            <a href="#" id="clear-cart" class="button-clear-cart u-full-width">Clear Cart</a>
+          </div>
+        </li>
+        <li>
+          <a href="login.html"><i class="fa fa-user-plus"></i>Signup</a>
+        </li>
+        <li>
+          <a href="login.html"><i class="fa fa-user"></i>Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-        <form id="login-form" action="success.html">
-          <input type="text" placeholder="User-Name" required />
-          <input type="password" placeholder="Passwort" required />
-          <input type="checkbox" id="login-checkbox" /><label
-            for="login-checkbox"
-            >Remember Password</label
-          >
-          <button type="submit">Login</button>
-        </form>
-
-        <form id="register-form" action="success.html">
-          <input type="text" placeholder="User-Name" required />
-          <input type="text" placeholder="E-Mail" required />
-          <input type="password" placeholder="Passwort" required />
-          <input type="checkbox" id="register-checkbox" /><label
-            for="register-checkbox"
-            >I agree to the terms & conditions</label
-          >
-          <button type="submit">Register</button>
-        </form>
+  <!-- Login-Form -->
+  <section id="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button id="login-btn" onclick="login()">
+          Login
+        </button>
+        <button id="register-btn" onclick="register()">
+          Register
+        </button>
       </div>
-    </section>
+      <div class="social-icons">
+        <img src="./img/fb.png" alt="facebook-icon" />
+        <img src="./img/ln.png" alt="linkedin-icon" />
+        <img src="./img/tw.png" alt="twitter-icon" />
+      </div>
 
-    <script src="js/script.js"></script>
-    <!-- Sliding Buttons -->
-    <script>
-      var x = document.getElementById("login-form");
-      var y = document.getElementById("register-form");
-      var z = document.getElementById("btn");
-      var l = document.getElementById("login-btn");
-      var r = document.getElementById("register-btn");
+      <form id="login-form" action="success.html">
+        <input type="text" placeholder="User-Name" required />
+        <input type="password" placeholder="Passwort" required />
+        <input type="checkbox" id="login-checkbox" /><label for="login-checkbox">Remember Password</label>
+        <button type="submit">Login</button>
+      </form>
 
-      function register() {
-        x.style.left = "-400px";
-        y.style.left = "50px";
-        z.style.left = "110px";
-        l.style.color = "var(--darkgrey)";
-        r.style.color = "var(--white)";
-      }
-      function login() {
-        x.style.left = "50px";
-        y.style.left = "450px";
-        z.style.left = "0";
-        r.style.color = "var(--darkgrey)";
-        l.style.color = "var(--white)";
-      }
-    </script>
-  </body>
+      <form id="register-form" action="success.html">
+        <input type="text" placeholder="User-Name" required />
+        <input type="text" placeholder="E-Mail" required />
+        <input type="password" placeholder="Passwort" required />
+        <input type="checkbox" id="register-checkbox" /><label for="register-checkbox">I agree to the terms &
+          conditions</label>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <!-- Sliding Buttons -->
+  <script>
+    var x = document.getElementById("login-form");
+    var y = document.getElementById("register-form");
+    var z = document.getElementById("btn");
+    var l = document.getElementById("login-btn");
+    var r = document.getElementById("register-btn");
+
+    function register() {
+      x.style.left = "-400px";
+      y.style.left = "50px";
+      z.style.left = "110px";
+      l.style.color = "var(--darkgrey)";
+      r.style.color = "var(--white)";
+    }
+
+    function login() {
+      x.style.left = "50px";
+      y.style.left = "450px";
+      z.style.left = "0";
+      r.style.color = "var(--darkgrey)";
+      l.style.color = "var(--white)";
+    }
+  </script>
+</body>
+
 </html>
